@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> Calculator </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    </head>
+
+    <body>
+        <p>Learning</p>
+
+        <input type = 'text' id = 'number1' />
+        <input type = 'text' id = 'number2' />
+        <button id="submit"> Click here to calculate </button>
+
+        <div id='output'>
+          <p>Your results are:</p>
+        </div>
+
+      <script>
+
+      // let hoursToLearn = 500;
+      // console.log(hoursToLearn);
+
+
+      // let answer = prompt('How many hours are willing to devote to code?');
+      //
+      // if (answer == 3 | answer  == 2 ){
+      //   console.log('good!');
+      // } else if (answer == 4 | answer == 5 | answer == 6){
+      //   console.log('great! ');
+      // } else if (answer >= 7){
+      //   console.log('woah! there is no way that you can code for 7 or more hours a night. Relax champ!');
+      // } else if (answer <= 1){
+      //   console.log('coding one hour or less a night is too little to retain knowledge. pump those numbers up baby!');
+      // };
+
+
+      let answer = prompt('How many hours a night are you willing to devote to coding?')
+
+      if (answer == 3 | answer  == 2 ){
+        prompt('good, exp level in months?')
+        if (answer == 2){
+          console.log('good!')
+        } else if(answer == 3){
+          console.log('great');
+        }
+      };
+
+      //   let hoursExperience = prompt('approximately how many hours experience do you have (in any computer language) coding?')
+      //   if(hoursExperience < 100){
+      //     console.log('you need 450 more hours')
+      //   };
+      //   if(hoursExperience > 100){
+      //     console.log('you need 400 more hours')
+      //   };
+      //   else if(hoursExperience > 200){
+      //     console.log('you need 300 more hours')
+      //   };
+      //   else if(hoursExperience > 300){
+      //     console.log('you need 200 more hours');
+      //   };
+      //   else if(hoursExperience > 400){
+      //     console.log('you need 100 more hours');
+      //   };
+      //   else if(hoursExperience > 400){
+      //     console.log('you need 40 more hours');
+      //   };
+      //   else{
+      //     console.log('error')
+      //   }
+      // } else if (answer == 4 | answer == 5 | answer == 6){
+      //   let hoursExperience = prompt('approximately how many hours experience do you have (in any computer language) coding?');
+      //
+      //   if(hoursExperience < 100){
+      //     console.log('you need 200 more hours')
+      //   };
+      //   if(hoursExperience < 200){
+      //     console.log('you need 100 more hours');
+      //   };
+      //   if(hoursExperience < 300){
+      //     console.log('you need 70 more hours');
+      //   };
+      //   if(hoursExperience < 400){
+      //     console.log('you need 35 more hours');
+      //   };
+      //   if(hoursExperience >= 400){
+      //     console.log('you need 20 more hours');
+      //   };
+      //
+      // } else if (answer >= 7){
+      //   console.log('woah! there is no way that you can code for 7 or more hours a night. Relax champ!');
+      // } else if (answer <= 1){
+      //   console.log('coding one hour or less a night is too little to retain knowledge. pump those numbers up baby!');
+      // };
+
+
+
+      $('#submit').click(function(){
+
+        let num1 = $('#number1').val();
+        let num2 = $('#number2').val();
+
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+
+        let product = num1 * num2;
+
+        console.log(product);
+
+        $('#output').append('<p>' + product + '</p>');
+
+      });
+
+      </script>
+
+
+
+
+
+
+    </body>
+</html>
