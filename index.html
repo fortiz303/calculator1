@@ -9,117 +9,97 @@
     </head>
 
     <body>
-        <p>Learning</p>
+        <h1><p text align='center'>Learning Javascript</p></h1>
 
-        <input type = 'text' id = 'number1' />
-        <input type = 'text' id = 'number2' />
-        <button id="submit"> Click here to calculate </button>
+        <p text align='center'> how many hours a day are you willing to devote to learning js?
+          <br> <input type='text' id='question1'> </p>
+        <p text align='center'>how many hours have you coded in another computer language?
+          <br><input type='text' id='question2'></p>
+
+        <div text align='center'><button id="submit"> Click here to calculate </button></div>
 
         <div id='output'>
-          <p>Your results are:</p>
+          <p text align='center'>Your results are:</p><p id ='results'>
         </div>
 
       <script>
 
-      // let hoursToLearn = 500;
-      // console.log(hoursToLearn);
+
+    $('#submit').click(function(){
+
+        let question1 = $('#question1').val();
+        let question2 = $('#question2').val();
 
 
-      // let answer = prompt('How many hours are willing to devote to code?');
-      //
-      // if (answer == 3 | answer  == 2 ){
-      //   console.log('good!');
-      // } else if (answer == 4 | answer == 5 | answer == 6){
-      //   console.log('great! ');
-      // } else if (answer >= 7){
-      //   console.log('woah! there is no way that you can code for 7 or more hours a night. Relax champ!');
-      // } else if (answer <= 1){
-      //   console.log('coding one hour or less a night is too little to retain knowledge. pump those numbers up baby!');
-      // };
+        //convert text to numbers
+        // num1 = parseInt(num1);
+        // num2 = parseInt(num2);
+// irrelevent code
+        // let product = num1 * num2;
+        // console.log(product);
+        // $('#output').append('<p>' + product + '</p>');
+      // });
 
-
-      let answer = prompt('How many hours a night are you willing to devote to coding?')
-
-      if (answer == 3 | answer  == 2 ){
-        prompt('good, exp level in months?')
-        if (answer == 2){
-          console.log('good!')
-        } else if(answer == 3){
-          console.log('great');
+      //script, algorithm for calculator
+      let answer = question1;
+      //script for a lazy developer
+      if (answer == 1 | answer == 2){
+        answer2 = question2
+          if(answer2 < 100){
+            $('#results').html('Expect to become proficient at Javascript in 1 year and 1-2 months');
+        } else if (answer2 < 200){
+            $('#results').html('Expect to become proficient at Javascript in 11 months');
+        } else if (answer2 < 300 ){
+            $('#results').html('Expect to become proficient at Javascript in 8 months');
+        } else if (answer2 < 400 ){
+            $('#results').html('Expect to become proficient at Javascript within 4 months');
+        } else if (answer2 < 500){
+            $('#results').html('Expect to become proficient at Javascript in 1-2 months');
+        } else {
+          $('#results').html('Expect to become proficient at Javascript in 2-3 weeks');
+        }
+      };
+      //script for a somewhat committed developer
+      if (answer == 3 | answer == 4 | answer == 5 ){
+        answer3 = question2
+          if (answer3 < 100){
+            $('#results').html('Expect to become proficient at Javascript in 8 months')
+        } else if (answer3 < 200){
+            $('#results').html('Expect to become proficient at Javascript in 6 months');
+        } else if (answer3 < 300 ){
+            $('#results').html('Expect to become proficient at Javascript in 4 months');
+        } else if (answer3 < 400 ){
+          $('#results').html('Expect to become proficient at Javascript in 2 months');
+        } else if (answer3 < 500){
+          $('#results').html('Expect to become proficient at Javascript in 1 month');
+        } else {
+          $('#results').html('Expect to become proficient at Javascript in 2 weeks');
         }
       };
 
-      //   let hoursExperience = prompt('approximately how many hours experience do you have (in any computer language) coding?')
-      //   if(hoursExperience < 100){
-      //     console.log('you need 450 more hours')
-      //   };
-      //   if(hoursExperience > 100){
-      //     console.log('you need 400 more hours')
-      //   };
-      //   else if(hoursExperience > 200){
-      //     console.log('you need 300 more hours')
-      //   };
-      //   else if(hoursExperience > 300){
-      //     console.log('you need 200 more hours');
-      //   };
-      //   else if(hoursExperience > 400){
-      //     console.log('you need 100 more hours');
-      //   };
-      //   else if(hoursExperience > 400){
-      //     console.log('you need 40 more hours');
-      //   };
-      //   else{
-      //     console.log('error')
-      //   }
-      // } else if (answer == 4 | answer == 5 | answer == 6){
-      //   let hoursExperience = prompt('approximately how many hours experience do you have (in any computer language) coding?');
-      //
-      //   if(hoursExperience < 100){
-      //     console.log('you need 200 more hours')
-      //   };
-      //   if(hoursExperience < 200){
-      //     console.log('you need 100 more hours');
-      //   };
-      //   if(hoursExperience < 300){
-      //     console.log('you need 70 more hours');
-      //   };
-      //   if(hoursExperience < 400){
-      //     console.log('you need 35 more hours');
-      //   };
-      //   if(hoursExperience >= 400){
-      //     console.log('you need 20 more hours');
-      //   };
-      //
-      // } else if (answer >= 7){
-      //   console.log('woah! there is no way that you can code for 7 or more hours a night. Relax champ!');
-      // } else if (answer <= 1){
-      //   console.log('coding one hour or less a night is too little to retain knowledge. pump those numbers up baby!');
-      // };
-
-
-
-      $('#submit').click(function(){
-
-        let num1 = $('#number1').val();
-        let num2 = $('#number2').val();
-
-        num1 = parseInt(num1);
-        num2 = parseInt(num2);
-
-        let product = num1 * num2;
-
-        console.log(product);
-
-        $('#output').append('<p>' + product + '</p>');
-
-      });
+      //script for somebody who is going to pound out code
+      if(answer == 6 | answer == 7 | answer == 8 ){
+        answer4 = question2
+          if(answer4 < 100){
+            $('#results').html('Expect to become proficient at Javascript in 5 months');
+        } else if (answer4 < 200){
+            $('#results').html('Expect to become proficient at Javascript in 3 months');
+        } else if (answer4 < 300 ){
+            $('#results').html('Expect to become proficient at Javascript in 2 months');
+        } else if (answer4 < 400 ){
+            $('#results').html('Expect to become proficient at Javascript in 1 month');
+        } else if (answer4 < 500){
+            $('#results').html('Expect to become proficient at Javascript in 2 weeks');
+        } else {
+            $('#results').html('Expect to become proficient at Javascript in 1 week')
+        }
+      };
+      if(answer > 8){
+        $('#results').html('While we encourage you to study hard, we believe that studying 9 hours or more a day is not sustainable. Cut down your hours and try again. ')
+      }
+    });
 
       </script>
-
-
-
-
-
 
     </body>
 </html>
