@@ -60,14 +60,12 @@
         $('#results').html('While we encourage you to study hard, we believe that studying 9 hours or more a day is not sustainable. Cut down your hours and try again. ')
       }
 
-      document.getElementById('submit').addEventListener('click', function() {
 
         document.querySelector('#results').innerHTML;
         document.querySelector('.bg-modal').style.display= 'flex';
 
-      });
-      document.querySelector('.close').addEventListener('click',function(){
-        document.querySelector('.bg-modal').style.display= 'none';
-      });
+        document.querySelector('.close').addEventListener('click',function(){
+          document.querySelector('.bg-modal').style.display= 'none';
+        });
 
     });
