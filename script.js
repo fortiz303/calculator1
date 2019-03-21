@@ -1,5 +1,6 @@
 
     $('#submit').click(function(){
+
         let question1 = $('#question1').val();
         let question2 = $('#question2').val();
 
@@ -58,10 +59,15 @@
       if(answer > 8){
         $('#results').html('While we encourage you to study hard, we believe that studying 9 hours or more a day is not sustainable. Cut down your hours and try again. ')
       }
-    });
 
-    // When the user clicks on div, open the popup
-    function myFunction() {
-      var popup = document.getElementById("myPopup");
-      popup.classList.toggle("show");
-    }
+      document.getElementById('submit').addEventListener('click', function() {
+
+        document.querySelector('#results').innerHTML;
+        document.querySelector('.bg-modal').style.display= 'flex';
+
+      });
+      document.querySelector('.close').addEventListener('click',function(){
+        document.querySelector('.bg-modal').style.display= 'none';
+      });
+
+    });
